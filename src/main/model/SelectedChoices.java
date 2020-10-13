@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 //Represents the collection of responses that the player selects
+
 public class SelectedChoices {
 
     public ArrayList<Choice> choices;
