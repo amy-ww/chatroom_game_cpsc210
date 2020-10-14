@@ -1,6 +1,6 @@
 package model;
-//Represents a choice that the player can select during the game
 
+//Represents a choice that the player can select during the game
 public class Choice {
 
     String text;

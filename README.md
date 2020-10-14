@@ -22,9 +22,10 @@ Having played many otome games (Japanese dating sims), I decided to try my hand
 at making something along that genre.
 
 ## User stories 
-- As a user, I want to select choices (X) that will be added to a list (Y) to 
+- As a user, I want to select choices (X) that will be added to a list of choices (Y) to 
 determine the ending I get.
-- As a user, I want to be able to change the main character's first and last name.
+- As a user, I want to be able to change the main character's first and last name
+when the story starts.
 - As a user, I want to be able to adjust the volume of sound. 
-- As a user, 
+- As a user, I want to be able to view my branch progress as I play.
  

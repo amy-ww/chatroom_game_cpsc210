@@ -2,7 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-//Represents the collection of responses that the player selects
+//Represents the collection of choices that the player selects
 
 public class SelectedChoices {
 

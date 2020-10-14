@@ -90,4 +90,28 @@ public class CorrectChoicesTest {
         assertEquals(2,cc.correctChoiceChecker(sc));
     }
 
+    @Test
+    //checks: correct number of correct choices is produced by CorrectChoiceChecker (4 right)
+    public void testCorrectChoiceCheckerFourChoices() {
+        CorrectChoices cc = new CorrectChoices();
+        Choice choiceOne = new Choice();
+        choiceOne.changeChoice("Say no.");
+        Choice choiceTwo = new Choice();
+        choiceTwo.changeChoice("Say yes.");
+        Choice choiceThree = new Choice();
+        choiceThree.changeChoice("Push him away.");
+        Choice choiceExtra = new Choice();
+        choiceExtra.changeChoice("Hug him.");
+        cc.addCorrectChoice(choiceOne);
+        cc.addCorrectChoice(choiceTwo);
+        cc.addCorrectChoice(choiceThree);
+        cc.addCorrectChoice(choiceExtra);
+        SelectedChoices sc = new SelectedChoices();
+        sc.addSelectedChoice(choiceOne);
+        sc.addSelectedChoice(choiceTwo);
+        sc.addSelectedChoice(choiceThree);
+        sc.addSelectedChoice(choiceExtra);
+        assertEquals(4,cc.correctChoiceChecker(sc));
+    }
+
 }

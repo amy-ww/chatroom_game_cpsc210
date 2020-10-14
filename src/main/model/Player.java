@@ -1,7 +1,6 @@
 package model;
 
 //Contains first and last name information of the player, who is the main character
-// in the game
 
 public class Player {
 
