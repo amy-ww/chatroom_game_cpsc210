@@ -1,14 +1,11 @@
-# My Personal Project: A White Day Love Story
+# My Personal Project: ChatAway
 
 ## What will the application do?
 
-*A White Day Love Story* is a short, decision-based game 
-that will hopefully allow you to experience a simple love story between 
-two university students on White Day. Pick the right choices to get the best ending! 
+*ChatAway* is a short, decision-based game that will hopefully allow you to experience 
+the possibilities of finding love online using a fictional chatroom service called ChatAway.  
+Pick the right choices to get the best ending! 
 <br> <br>
-(White Day is a holiday in Japan that occurs on March 14, that is similar 
-to Valentine's Day. For many people, it is a second chance to profess
-their love.)
 
 ## Who will use it?
 Anyone who is looking to play a short game.
@@ -27,5 +24,7 @@ determine the ending I get.
 - As a user, I want to be able to change the main character's first and last name
 when the story starts.
 - As a user, I want to be able to adjust the volume of sound. 
-- As a user, I want to be able to view my branch progress as I play.
+- As a user, I want to be able to view my correct choice progress as I play.
+- As user, I want to be able to save my current progress/location in the game. 
+- As a user, I want to be able to load my save file.
  
