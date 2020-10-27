@@ -21,10 +21,10 @@ at making something along that genre.
 ## User stories 
 - As a user, I want to select choices (X) that will be added to a list of choices (Y) to 
 determine the ending I get.
-- As a user, I want to be able to change the main character's first and last name
+- As a user, I want to be able to change the main character's first name, last name, and username
 when the story starts.
 - As a user, I want to be able to adjust the volume of sound. 
-- As a user, I want to be able to view my correct choice progress as I play.
-- As user, I want to be able to save my current progress/location in the game. 
+- As a user, I want to be able to view my correct choice progress at the end.
+- As a user, I want to be able to save at certain prompted checkpoints in the game. 
 - As a user, I want to be able to load my save file.
  

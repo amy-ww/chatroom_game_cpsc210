@@ -30,13 +30,12 @@ public class CorrectChoices {
         return choicesKey.get(index);
     }
 
-    //REQUIRES: size of correct choices = size of selected choices
     //EFFECTS: returns the number of correct choices chosen by player
     public int correctChoiceChecker(SelectedChoices playerAnswers) {
         int numOfCorrectChoices = 0;
         for (int choiceNum = 0; choiceNum < playerAnswers.sizeSelectedChoices(); choiceNum++) {
             if ((playerAnswers.retrieveSelectedChoice(choiceNum)).returnChoice()
-                    == (choicesKey.get(choiceNum)).returnChoice()) {
+                    .equals((choicesKey.get(choiceNum)).returnChoice())) {
                 numOfCorrectChoices = numOfCorrectChoices + 1;
             }
         }

@@ -1,19 +1,21 @@
 package model;
 
 //Contains first and last name information of the player, who is the main character
-
 public class Player {
 
     String firstName;
     String lastName;
     String fullName;
+    String userName;
 
     //EFFECTS: constructs a player with default name "Sakura Sato"
     public Player() {
         firstName = "Sakura";
         lastName = "Sato";
         fullName = firstName + " " + lastName;
+        userName = "not_sakura";
     }
+
 
     //MODIFIES: this
     //EFFECTS: changes first name of player
@@ -29,6 +31,12 @@ public class Player {
         fullName = firstName + " " + lastName;
     }
 
+    // MODIFIES: this
+    // EFFECTS: changes username of player
+    public void changePlayerUserName(String newUserName) {
+        userName = newUserName;
+    }
+
     //EFFECTS: returns first name
     public String getFirstName() {
         return firstName;
@@ -42,6 +50,11 @@ public class Player {
     //EFFECTS: returns full name
     public String getFullName() {
         return fullName;
+    }
+
+    //EFFECTS: returns username
+    public String getUserName() {
+        return userName;
     }
 
 }

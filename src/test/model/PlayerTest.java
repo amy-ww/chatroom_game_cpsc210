@@ -7,12 +7,13 @@ import static org.junit.jupiter.api.Assertions.*;
 class PlayerTest {
 
     @Test
-    //checks: constructs new player with default name "Sakura Sato"
+    //checks: constructs new player with default name "Sakura Sato" and default username "not_sakura
     public void testPlayerConstructDefaultName() {
         Player p = new Player();
         assertEquals("Sakura", p.firstName);
         assertEquals("Sato",p.lastName);
         assertEquals("Sakura Sato", p.fullName);
+        assertEquals("not_sakura", p.userName);
     }
 
     @Test
@@ -34,6 +35,14 @@ class PlayerTest {
     }
 
     @Test
+    //checks: changes player username from "not_sakura" to "i_am_sakura"
+    public void testUserNameChangedCorrectly() {
+        Player p = new Player();
+        p.changePlayerUserName("i_am_sakura");
+        assertEquals("i_am_sakura",p.userName);
+    }
+
+    @Test
     //checks: correct first name is returned using get method
     public void testGetFirstName() {
         Player p = new Player();
@@ -52,6 +61,13 @@ class PlayerTest {
     public void testGetFullName() {
         Player p = new Player();
         assertEquals("Sakura Sato",p.getFullName());
+    }
+
+    @Test
+    //checks: correct username is returned using get method
+    public void testGetUserName() {
+        Player p = new Player();
+        assertEquals("not_sakura", p.getUserName());
     }
 
 
