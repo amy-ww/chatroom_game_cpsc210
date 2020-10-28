@@ -1184,7 +1184,7 @@ public class Game {
                 + " really need a place to vent.")) {
             badPathHaruki();
         } else if (playerRecord.returnLast().equals(you.getUserName() + ": LOL nononono, I'm not into that. Um,"
-                + " anyways,how was your day?") || playerRecord.returnLast().equals(you.getUserName() + ": "
+                + " anyways, how was your day?") || playerRecord.returnLast().equals(you.getUserName() + ": "
                 + "That's what they all say but you're probably judging me. It's okay lmao. Let's just not talk"
                 + " about this... So, how are you doing?")) {
             goodNeutralPathHaruki2();
