@@ -251,6 +251,7 @@ public class Game {
     public void returnSystemMessage() {
         System.out.println("ChatAway SYSTEM MESSAGE: You are currently on a prepaid plan of 1 chatroom courtesy of "
                 + "hehehehimari. Thank you for choosing the ChatAway Rent-A-'Friend' service!");
+        fillerScannerInput();
     }
 
     //MODIFIES: this
@@ -341,6 +342,7 @@ public class Game {
     public void routeKuro() {
         System.out.println("ChatAway SYSTEM MESSAGE: This chatroom is prepaid, so your credit card information is not "
                 + "required. Please be vigilant of monetary scams.");
+        fillerScannerInput();
         System.out.println("bored_and_cold (Kuro) has entered the chatroom.");
         fillerScannerInput();
         System.out.println("bored_and_cold (Kuro): What do you want?");
@@ -604,6 +606,7 @@ public class Game {
     public void routeHaruki() {
         System.out.println("ChatAway SYSTEM MESSAGE: This chatroom is prepaid, so your credit card information is not "
                 + "required. Please be vigilant of monetary scams.");
+        fillerScannerInput();
         System.out.println("haruharu (Haruki) has entered the chatroom.");
         fillerScannerInput();
         System.out.println("haruharu (Haruki): Hello! How was your day? :) Have you eaten yet?");
@@ -834,6 +837,7 @@ public class Game {
     public void routeYuto() {
         System.out.println("ChatAway SYSTEM MESSAGE: This chatroom is prepaid, so your credit card information is not "
                 + "required. Please be vigilant of monetary scams.");
+        fillerScannerInput();
         System.out.println("best_dude (Yuto) has entered the chatroom.");
         fillerScannerInput();
         System.out.println("best_dude (Yuto): Well, here I am. What are your other two wishes?");
