@@ -360,8 +360,7 @@ public class Game {
             saveProgress();
             goodNeutralPathKuro();
         } else if (userInput.equals("2")) {
-            playerRecord.printSaveLine(you.getUserName() + ": Brrrr, so cold, so mean! But I love it so much,Roro~");
-            saveProgress();
+            System.out.println(you.getUserName() + ": Brrrr, so cold, so mean! But I love it so much,Roro~");
             badPathKuro();
         }
     }
@@ -624,9 +623,8 @@ public class Game {
             saveProgress();
             goodNeutralPathHaruki();
         } else if (userInput.equals("2")) {
-            playerRecord.printSaveLine(you.getUserName() + ": Ugh, my day was awful. I'm sorry, but "
+            System.out.println(you.getUserName() + ": Ugh, my day was awful. I'm sorry, but "
                     + "I really need a place to vent.");
-            saveProgress();
             badPathHaruki();
         }
     }
@@ -856,9 +854,8 @@ public class Game {
             saveProgress();
             goodNeutralPathYuto();
         } else if (userInput.equals("2")) {
-            playerRecord.printSaveLine(you.getUserName() + ": My other wish? Well, I wish I could rearrange the "
+            System.out.println(you.getUserName() + ": My other wish? Well, I wish I could rearrange the "
                     + "alphabet so I could put U and I together ;)");
-            saveProgress();
             badPathYuto();
             fillerScannerInput();
         }
@@ -1152,9 +1149,6 @@ public class Game {
         if (playerRecord.returnLast().equals(you.getUserName() + ": Um... Can we please forget about the role"
                 + " play stuff and just talk normally... Please?")) {
             goodNeutralPathKuro();
-        } else if (playerRecord.returnLast().equals(you.getUserName() + ": Brrrr, so cold, so mean! But I love  "
-                + "it so much, Roro~")) {
-            badPathKuro();
         } else if (playerRecord.returnLast().equals(you.getUserName() + ": Aha... Well, long story short, this is a "
                 + "gift from a friend, so no biggie.")
                 || playerRecord.returnLast().equals(you.getUserName() + ": I'm not crazy enough to pay for this, "
@@ -1180,9 +1174,6 @@ public class Game {
         if (playerRecord.returnLast().equals(you.getUserName() + ": I'm doing well! ... Uhh, you're not going to do "
                 + "weird role play stuff right?")) {
             goodNeutralPathHaruki();
-        } else if (playerRecord.returnLast().equals(you.getUserName() + ": Ugh, my day was awful. I'm sorry, but"
-                + " really need a place to vent.")) {
-            badPathHaruki();
         } else if (playerRecord.returnLast().equals(you.getUserName() + ": LOL nononono, I'm not into that. Um,"
                 + " anyways, how was your day?") || playerRecord.returnLast().equals(you.getUserName() + ": "
                 + "That's what they all say but you're probably judging me. It's okay lmao. Let's just not talk"
@@ -1205,9 +1196,6 @@ public class Game {
         if (playerRecord.returnLast().equals(you.getUserName() + ": Sorry dude, but I'm not the biggest fan of pick-up"
                 + " lines. That was pretty good though.")) {
             goodNeutralPathYuto();
-        } else if (playerRecord.returnLast().equals(you.getUserName() + ": My other wish? Well, I wish I could "
-                + "rearrange the alphabet so I could put U and I together ;)")) {
-            badPathYuto();
         } else if (playerRecord.returnLast().equals(you.getUserName() + ": I think you could just try to relax and be"
                 + " yourself? We're all strangers here anyway.")
                 || playerRecord.returnLast().equals(you.getUserName() + ": Is this whole flirtation thing a front you "
