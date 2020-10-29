@@ -227,7 +227,7 @@ public class Game {
         System.out.println("Username: bored_and_cold");
         System.out.println("Type: Cold and sad");
         System.out.println("Location: WestU");
-        System.out.println("A special message to you: … Whatever.");
+        System.out.println("A special message to you: ... Whatever.");
         fillerScannerInput();
         System.out.println("Profile 2");
         System.out.println("Name: Haruki Kubo ");
@@ -284,7 +284,7 @@ public class Game {
         System.out.println("hehehehimari: It's virtual, but also kind of real because it's not a bot.");
         fillerScannerInput();
         System.out.println("hehehehimari: They also advertise themselves with different roles they can play. "
-                + "The cold type, the smooth player… Whatever you want. Oh! And guess what? ");
+                + "The cold type, the smooth player... Whatever you want. Oh! And guess what? ");
         fillerScannerInput();
         System.out.println(you.getUserName() + ": ... What?");
         fillerScannerInput();
@@ -353,7 +353,7 @@ public class Game {
     //MODIFIES: this, playerRecord
     //EFFECTS: lets the player choose between the good/neutral end route or the bad end route for Kuro
     public void majorBranchKuro() {
-        System.out.println("1. Um... Can we please forget about the role play stuff and just talk normally… Please?");
+        System.out.println("1. Um... Can we please forget about the role play stuff and just talk normally... Please?");
         System.out.println("2. Brrrr, so cold, so mean! But I love it so much,Roro~");
         userInput = scanner.nextLine();
         if (userInput.equals("1")) {
@@ -521,7 +521,7 @@ public class Game {
         fillerScannerInput();
         System.out.println(you.getUserName() + ": Aww, you have a soft spot for me, don't you? ");
         fillerScannerInput();
-        System.out.println("bored_and_cold (Kuro): … Shut up.");
+        System.out.println("bored_and_cold (Kuro): ... Shut up.");
         fillerScannerInput();
         System.out.println("1. Are you bluuuushing? Just admit it~");
         System.out.println("2. Aww, little bad boy still trying to play tough?");
@@ -656,7 +656,7 @@ public class Game {
         System.out.println("haruharu (Haruki): Haha, I can do that if that's what you like. I don't judge. :)");
         fillerScannerInput();
         System.out.println("1. LOL nononono, I'm not into that. Um, anyways, how was your day?");
-        System.out.println("2. That's what all they say but u probably judging me. It's okay lmao. Let's just not"
+        System.out.println("2. That's what all they say but ur probably judging me. It's okay lmao. Let's just not"
                 + " talk about this... So, how are you doing?");
         userInput = scanner.nextLine();
         if (userInput.equals("1")) {
@@ -698,11 +698,11 @@ public class Game {
     //MODIFIES: this, playerRecord
     //EFFECTS: runs third part of Haruki's neutral/good end route (has a choice)
     public void goodNeutralPathHaruki3() {
-        System.out.println("1. Everyone's tired once in a while… I'm tired too. What's making you tired?");
+        System.out.println("1. Everyone's tired once in a while... I'm tired too. What's making you tired?");
         System.out.println("2. Tired from what? :(");
         userInput = scanner.nextLine();
         if (userInput.equals("1")) {
-            playerRecord.printSaveLine(you.getUserName() + ": Everyone's tired once in a while… I'm tired too. "
+            playerRecord.printSaveLine(you.getUserName() + ": Everyone's tired once in a while... I'm tired too. "
                     + "What's making you tired?");
             saveProgress();
             fillerScannerInput();
@@ -944,6 +944,7 @@ public class Game {
             saveProgress();
             fillerScannerInput();
             System.out.println("Yeah, I definitely do that But I also read Shakespeare.");
+            fillerScannerInput();
         } else if (userInput.equals("2")) {
             playerRecord.printSaveLine(you.getUserName() + ": Might be a long shot but, do you read Shakespeare?");
             saveProgress();
@@ -976,6 +977,7 @@ public class Game {
         System.out.println("best_dude (Yuto): Thanks, that really means a lot to me. Seriously.");
         fillerScannerInput();
         System.out.println("ChatAway SYSTEM MESSAGE: The chatroom will be closing soon. You can now leave anytime.");
+        fillerScannerInput();
     }
 
     //MODIFIES: this, playerRecord
@@ -1180,15 +1182,15 @@ public class Game {
             goodNeutralPathHaruki();
         } else if (playerRecord.returnLast().equals(you.getUserName() + ": LOL nononono, I'm not into that. Um,"
                 + " anyways, how was your day?") || playerRecord.returnLast().equals(you.getUserName() + ": "
-                + "That's what they all say but you're probably judging me. It's okay lmao. Let's just not talk"
-                + " about this... So, how are you doing?")) {
+                + "That's what all they say but ur probably judging me. It's okay lmao. "
+                + "Let's just not talk about this... So, how are you doing?")) {
             goodNeutralPathHaruki2();
             goodNeutralPathHaruki3();
             goodNeutralPathHaruki4();
             goodNeutralPathHaruki5();
-        } else if (playerRecord.returnLast().equals(you.getUserName() + ": Everyone's tired once in a while… I'm tired,"
-                + " too. What's making you tired?") || playerRecord.returnLast().equals(you.getUserName() + ": "
-                + "Tired from what? :(")) {
+        } else if (playerRecord.returnLast().equals(you.getUserName() + ": Everyone's tired once in a while... "
+                + "I'm tired too. What's making you tired?") || playerRecord.returnLast().equals(you.getUserName()
+                + ": Tired from what? :(")) {
             goodNeutralPathHaruki4();
             goodNeutralPathHaruki5();
         }
@@ -1202,7 +1204,7 @@ public class Game {
             goodNeutralPathYuto();
         } else if (playerRecord.returnLast().equals(you.getUserName() + ": I think you could just try to relax and be"
                 + " yourself? We're all strangers here anyway.")
-                || playerRecord.returnLast().equals(you.getUserName() + ": Is this whole flirtation thing a front you "
+                || playerRecord.returnLast().equals(you.getUserName() + ": Is this flirtation thing a front you "
                 + "put up?")) {
             goodNeutralPathYuto2();
             goodNeutralPathYuto3();
