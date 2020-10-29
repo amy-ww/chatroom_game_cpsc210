@@ -50,7 +50,7 @@ public class Game {
     public void displayMenu() {
         System.out.println("Welcome to ChatAway.");
         System.out.println("Please select a menu option:");
-        System.out.println("1. Chat");
+        System.out.println("1. New Chat");
         System.out.println("2. Load Save File");
         System.out.println("3. Settings");
         System.out.println("4. Exit");
@@ -65,6 +65,7 @@ public class Game {
             userInput = scanner.nextLine();
 
             if (userInput.equals("1")) {
+                clearJson();
                 saveDefault();
                 changeYourName();
                 changeYourUserName();
@@ -147,7 +148,7 @@ public class Game {
     //MODIFIES: yourChoices
     //EFFECTS: prints out the number of correct choices chosen out of all 4 choice branches
     public void viewProgress(CorrectChoices cc) {
-        System.out.println("Would you like to view your correct choice progress?");
+        System.out.println("Would you like to see how many correct choices you made?");
         System.out.println("1. Yes");
         System.out.println("2. No");
         userInput = scanner.nextLine();
@@ -1131,6 +1132,18 @@ public class Game {
             you.changePlayerFirstName(playerRecord.returnDialogueString(0));
             you.changePlayerLastName(playerRecord.returnDialogueString(1));
             you.changePlayerUserName(playerRecord.returnDialogueString(2));
+        } catch (IOException e) {
+            System.out.println("Unable to read from file: " + JSON_STORE);
+        }
+    }
+
+    //MODIFIES: this
+    //EFFECTS: clears the json file for a new chat
+    private void clearJson() {
+        try {
+            jsonWriter.open();
+            playerRecord = new GameText();
+            jsonWriter.writeGameText(playerRecord);
         } catch (IOException e) {
             System.out.println("Unable to read from file: " + JSON_STORE);
         }

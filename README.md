@@ -24,7 +24,10 @@ determine the ending I get.
 - As a user, I want to be able to change the main character's first name, last name, and username
 when the story starts.
 - As a user, I want to be able to adjust the volume of sound. 
-- As a user, I want to be able to view my correct choice progress at the end.
+- As a user, I want to be able to view my number of correct choices at the end.
+<br> <br> 
 - As a user, I want to be able to save at certain prompted checkpoints in the game. 
 - As a user, I want to be able to load my save file.
+- As a user, I want to be able to start a new chat without previous save information.
+
  
