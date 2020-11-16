@@ -53,6 +53,17 @@ public class GameText implements Writable {
         return conversation.get(index);
     }
 
+    //EFFECTS: returns the index of an object
+    public int returnIndex(String s) {
+        int i = 0;
+        for (Dialogue d : conversation) {
+            if (d.getDialogueString().equals(s)) {
+                i = conversation.indexOf(d);
+            }
+        }
+        return i;
+    }
+
     //EFFECTS: returns the string of the dialogue object at the given index
     public String returnDialogueString(int index) {
         return conversation.get(index).getDialogueString();
