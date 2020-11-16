@@ -17,7 +17,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
-//References:
+//Credits:
 //https://lunalucid.itch.io/free-creative-commons-bgm-collection for the background music used in playBGM
 
 //https://freesound.org/people/Sirkoto51/sounds/449547/ for the sound effect used in playSoundEffect
@@ -33,6 +33,8 @@ import java.util.ArrayList;
 
 //https://stackoverflow.com/questions/4048006/java-swing-how-to-remove-an-anonymous-actionlistener-from-a-component used
 //to model some code for removeAllActionListeners
+
+//https://en.bloggif.com/ used to create the GIFs for all the text
 
 //Contains the graphical user interface
 public class GUI {
