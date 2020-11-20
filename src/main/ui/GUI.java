@@ -10,6 +10,7 @@ import persistence.JsonWriter;
 
 import javax.sound.sampled.*;
 import javax.swing.*;
+import javax.swing.event.ListSelectionListener;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -420,6 +421,7 @@ public class GUI {
             }
         } else if (x == 1) {
             playerRecord.saveLine("Brrrr, so cold, so mean! But I love it so much, Roro~");
+            removeAllListListeners(choiceArea);
             kuroBadChoice1();
         }
     }
@@ -701,7 +703,8 @@ public class GUI {
                 harukiGoodChoice1();
             }
         } else if (x == 1) {
-            addSaveLine("Ugh, my day was awful. I'm sorry, but I really need a place to vent.");
+            playerRecord.saveLine("Ugh, my day was awful. I'm sorry, but I really need a place to vent.");
+            removeAllListListeners(choiceArea);
             harukiBadChoice1();
         }
     }
@@ -862,6 +865,7 @@ public class GUI {
         removeAllActionListeners(send);
         ArrayList<String> list = new ArrayList<>();
         strings2.addElement("YOU ARE ON THE BAD END ROUTE.");
+        list.add("Ugh, my day was awful. I'm sorry, but I really need a place to vent.");
         list.add(createHarukiText("Oh, it's no problem! I'm here to listen :)"));
         list.add(createPlayerText("I think I just failed my midterm today, and I don't really know what to do now."));
         list.add(createPlayerText("I really liked the class too."));
@@ -922,7 +926,7 @@ public class GUI {
                 "The chatroom will be closing soon. You can now leave anytime.",
                 "ChatAway SYSTEM MESSAGE", JOptionPane.INFORMATION_MESSAGE);
         send.addActionListener(e -> {
-            strings.addElement(createHarukiText("... Sorry, I wasn't cheer you up..."));
+            strings.addElement(createHarukiText("... Sorry, I wasn't able to cheer you up..."));
             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(frame),
                     "Bad End, where you made a ball of sunshine feel bad." + "\n" + "You will now be exited.");
             System.exit(0);
@@ -970,8 +974,9 @@ public class GUI {
                 yutoGoodChoice1();
             }
         } else if (x == 1) {
-            addSaveLine("My other wish? Well, I wish I could rearrange the alphabet so I could"
+            playerRecord.saveLine("My other wish? Well, I wish I could rearrange the alphabet so I could"
                     + " put U and I together ;)");
+            removeAllListListeners(choiceArea);
             yutoBadChoice1();
         }
     }
@@ -1131,6 +1136,8 @@ public class GUI {
         removeAllActionListeners(send);
         ArrayList<String> list = new ArrayList<>();
         strings2.addElement("YOU ARE ON THE BAD END ROUTE.");
+        list.add(createPlayerText("My other wish? Well, I wish I could rearrange the alphabet so I could"
+                + " put U and I together ;)"));
         list.add(createYutoText("Ooo, I've met my match it seems. Bring it on!"));
         list.add(createPlayerText("If you were a Transformer, you'd be Optimus Fine."));
         list.add(createYutoText("Baby, if you were words on a page, you'd be fine print."));
@@ -1203,6 +1210,13 @@ public class GUI {
     public void removeAllActionListeners(JButton button) {
         for (ActionListener al : button.getActionListeners()) {
             button.removeActionListener(al);
+        }
+    }
+
+    //EFFECTS: removes all list selection listeners from the JList
+    public void removeAllListListeners(JList<String> list) {
+        for (ListSelectionListener ls : list.getListSelectionListeners()) {
+            list.removeListSelectionListener(ls);
         }
     }
 
