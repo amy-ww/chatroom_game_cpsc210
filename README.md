@@ -30,4 +30,9 @@ when the story starts.
 - As a user, I want to be able to load my save file.
 - As a user, I want to be able to start a new chat without previous save information.
 
+## Phase 4: Task 2
+I chose to test and design a class in my model package to be robust.
+- The class I chose to make robust is my **CorrectChoices** class.
+- The method that throws a **NoChoiceSelectedException** is the **correctChoiceChecker** method.
+
  

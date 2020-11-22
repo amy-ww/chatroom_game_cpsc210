@@ -53,7 +53,7 @@ public class GameText implements Writable {
         return conversation.get(index);
     }
 
-    //EFFECTS: returns the index of an object
+    //EFFECTS: returns the index of an string
     public int returnIndex(String s) {
         int i = 0;
         for (Dialogue d : conversation) {

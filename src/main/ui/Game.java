@@ -1,6 +1,7 @@
 package ui;
 
 import model.*;
+import model.exceptions.NoChoicesSelectedException;
 import org.json.JSONException;
 import persistence.JsonReader;
 import persistence.JsonWriter;
@@ -163,7 +164,11 @@ public class Game {
                     yourChoices.addSelectedChoice(c);
                 }
             }
-            System.out.println(cc.correctChoiceChecker(yourChoices) + "/4");
+            try {
+                System.out.println(cc.correctChoiceChecker(yourChoices) + "/4");
+            } catch (NoChoicesSelectedException e) {
+                System.out.println("You didn't select any choices!");
+            }
         }
     }
 

@@ -1,5 +1,7 @@
 package model;
 
+import model.exceptions.NoChoicesSelectedException;
+
 import java.util.ArrayList;
 
 //Represents the collection of correct responses to get the good ending; there is a method that produces the number of
@@ -30,9 +32,13 @@ public class CorrectChoices {
         return choicesKey.get(index);
     }
 
-    //EFFECTS: returns the number of correct choices chosen by player
-    public int correctChoiceChecker(SelectedChoices playerAnswers) {
+    //EFFECTS: returns the number of correct choices chosen by player;
+    //         throws a NoChoicesSelectedException if playerAnswers is empty
+    public int correctChoiceChecker(SelectedChoices playerAnswers) throws NoChoicesSelectedException {
         int numOfCorrectChoices = 0;
+        if (playerAnswers.sizeSelectedChoices() == 0) {
+            throw new NoChoicesSelectedException();
+        }
         for (int choiceNum = 0; choiceNum < playerAnswers.sizeSelectedChoices(); choiceNum++) {
             if ((playerAnswers.retrieveSelectedChoice(choiceNum)).returnChoice()
                     .equals((choicesKey.get(choiceNum)).returnChoice())) {
