@@ -4,6 +4,7 @@ import model.Choice;
 import model.CorrectChoices;
 import model.Player;
 import model.SelectedChoices;
+import model.exceptions.EmptyChoiceKeyException;
 import org.json.JSONException;
 import persistence.JsonReader;
 import persistence.JsonWriter;
@@ -1284,19 +1285,21 @@ public class GUI {
             } else if (strings2.size() > 1) {
                 String s = choiceArea.getSelectedValue();
                 int x = strings2.indexOf(s);
-                System.out.println(x);
                 for (int i = 0; i < x + 1; i++) {
-                    if ((yourChoices.retrieveSelectedChoice(i)).returnChoice()
-                            .equals((cc.retrieveCorrectChoice(i)).returnChoice())) {
-                        numOfCorrectChoices = numOfCorrectChoices + 1;
+                    try {
+                        if ((yourChoices.retrieveSelectedChoice(i)).returnChoice()
+                                .equals((cc.retrieveCorrectChoice(i)).returnChoice())) {
+                            numOfCorrectChoices = numOfCorrectChoices + 1;
+                        }
+                    } catch (EmptyChoiceKeyException emptyChoiceKeyException) {
+                        emptyChoiceKeyException.printStackTrace();
                     }
                 }
             }
             playSoundEffect();
             JOptionPane.showMessageDialog(JOptionPane.getFrameForComponent(frame),
-                    "Up until your currently selected choice, you have gotten"
-                            + " " + numOfCorrectChoices + "/4 correct.", "ChatAway SYSTEM MESSAGE",
-                    JOptionPane.INFORMATION_MESSAGE);
+                    "Up until your currently selected choice, you have gotten" + " " + numOfCorrectChoices
+                            + "/4 correct.", "ChatAway SYSTEM MESSAGE", JOptionPane.INFORMATION_MESSAGE);
         });
     }
 

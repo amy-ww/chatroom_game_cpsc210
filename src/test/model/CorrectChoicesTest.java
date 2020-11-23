@@ -1,5 +1,6 @@
 package model;
 
+import model.exceptions.EmptyChoiceKeyException;
 import model.exceptions.NoChoicesSelectedException;
 import org.junit.jupiter.api.Test;
 
@@ -25,6 +26,7 @@ public class CorrectChoicesTest {
 
     @Test
     //checks: correct choice is retrieved
+    //Exception should not be thrown
     public void testRetrieveRightChoice() {
         CorrectChoices cc = new CorrectChoices();
         Choice choice = new Choice();
@@ -33,7 +35,25 @@ public class CorrectChoicesTest {
         cc.addCorrectChoice(choice);
         cc.addCorrectChoice(choiceTwo);
         cc.addCorrectChoice(choice);
-        assertEquals(choiceTwo,cc.retrieveCorrectChoice(1));
+        try {
+            assertEquals(choiceTwo,cc.retrieveCorrectChoice(1));
+        } catch (EmptyChoiceKeyException e) {
+            fail("Exception should not have been thrown.");
+            e.printStackTrace();
+        }
+    }
+
+    @Test
+    //checks: correct choice is retrieved
+    //Exception should be thrown
+    public void testExceptionThrownEmptyChoiceKey() {
+        CorrectChoices cc = new CorrectChoices();
+        try {
+            cc.retrieveCorrectChoice(0);
+            fail("Exception should have been thrown.");
+        } catch (EmptyChoiceKeyException e) {
+            //expected
+        }
     }
 
     @Test

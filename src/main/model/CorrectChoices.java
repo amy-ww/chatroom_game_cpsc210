@@ -1,5 +1,6 @@
 package model;
 
+import model.exceptions.EmptyChoiceKeyException;
 import model.exceptions.NoChoicesSelectedException;
 
 import java.util.ArrayList;
@@ -28,8 +29,12 @@ public class CorrectChoices {
 
     //REQUIRES: non-empty list
     //EFFECTS: returns the choice at the given index
-    public Choice retrieveCorrectChoice(int index) {
-        return choicesKey.get(index);
+    public Choice retrieveCorrectChoice(int index) throws EmptyChoiceKeyException {
+        if (choicesKey.size() == 0) {
+            throw new EmptyChoiceKeyException();
+        } else {
+            return choicesKey.get(index);
+        }
     }
 
     //EFFECTS: returns the number of correct choices chosen by player;

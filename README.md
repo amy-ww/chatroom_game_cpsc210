@@ -34,5 +34,13 @@ when the story starts.
 I chose to test and design a class in my model package to be robust.
 - The class I chose to make robust is my **CorrectChoices** class.
 - The method that throws a **NoChoiceSelectedException** is the **correctChoiceChecker** method.
+- The method that throws a **EmptyChoiceKeyException** is the **retrieveCorrectChoice** method.
 
- 
+## Phase 4: Task 3
+- I would make an abstract class or interface that SelectedChoices and CorrectChoices can extend, since they share many
+add/get methods.
+- The GUI has about 1500 lines, so I would want to make it more readable by refactoring it into more classes/interfaces
+ for the GUI display itself, game dialogue, and character routes.
+- For example, I would make a super class called Route that can be extended since all 3 character
+routes have similar behaviour.
+
